@@ -9,5 +9,5 @@ mkdir -p /chroot
 wget -O ${TARBALL} ${URL}
 tar xjpf ${TARBALL} -C /chroot
 
-docker run -v /chroot:/chroot trapni/chroot
+docker run -ti --rm --hostname gentoo-template -v /chroot:/chroot trapni/chroot
 ```
